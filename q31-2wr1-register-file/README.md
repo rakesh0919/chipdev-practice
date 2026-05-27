@@ -34,7 +34,7 @@ Running every clock edge:
 - when collision is high both dout1 and dout2 must be zero, if either output is nonzero while collision is high something is broken
 - one cycle after reset is asserted, all outputs must be zero
 
-> The reset assertion had the same timing issue as Q15 — it was firing on the same clock edge that resetn went low before the design responded. Fixed it with resetn_prev the same way.
+> The reset assertion had the same timing issue as Q15. fixed it the same way as before with resetn_prev
 
 ---
 

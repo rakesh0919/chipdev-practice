@@ -2,16 +2,16 @@ Q26. Multi-Bit FIFO Testbench Verification exercise for ChipDev Q26. The FIFO ho
 
 ## Tests
 
-**Test 1 — First write (0xAA)**
+**Test 1: First write (0xAA)**
 One entry in, one slot still free. Checks dout updates immediately and full stays low.
 
-**Test 2 — Second write (0xBB)**
+**Test 2: Second write (0xBB)**
 Fills the FIFO. The check here is that dout still shows 0xAA and not 0xBB. Verifies the first in behavior is actually working.
 
-**Test 3 — Overflow (0xCC)**
+**Test 3: Overflow (0xCC)**
 Writing to a full FIFO is defined as valid in the prompt. 0xAA should get pushed out and dout should now show 0xBB.
 
-**Test 4 — wr=0**
+**Test 4: wr=0**
 Set din=0xDD with write disabled. Nothing should change. Checks that wr is actually gating the write logic.
 
 ---

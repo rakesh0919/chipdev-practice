@@ -1,6 +1,6 @@
-# Q15 — Sequence Detector Testbench
+# Q15. Sequence Detector Testbench
 
-Verification exercise for ChipDev Q15. The design is a sequence detector that outputs dout=1 when it sees the pattern 1010 in a stream of bits. It has 5 states: S0, S1, S10, S101, and S1010. I focused on testing not just the happy path but also reset behavior, overlapping sequences, and sequences that almost match.
+Verification exercise for ChipDev Q15. The design is a sequence detector that outputs dout=1 when it sees the pattern 1010 in a stream of bits. It has 5 states: S0, S1, S10, S101, and S1010. I focused on testing not just the easiest path but also reset behavior, overlapping sequences, and sequences that almost match.
 
 ## Tests
 

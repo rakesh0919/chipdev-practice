@@ -39,12 +39,12 @@ Running every clock edge:
 ---
 
 ## Output
-Passed Test 1: basic read/write roundtrip correct
-Passed Test 2: both ports different addresses correct
-Passed Test 3: read collision on same address correct
-Passed Test 4: write/read collision correct
-Passed Test 5: write and read both ports simultaneously correct
-Passed Test 6: reset clears outputs correctly
-Passed Test 7: address 31 boundary correct
-All tests passed!
-testbench.sv:186: $finish called at 236000 (1ps)
+- Passed Test 1: basic read/write roundtrip correct
+- Passed Test 2: both ports different addresses correct
+- Passed Test 3: read collision on same address correct
+- Passed Test 4: write/read collision correct
+- Passed Test 5: write and read both ports simultaneously correct
+- Passed Test 6: reset clears outputs correctly
+- Passed Test 7: address 31 boundary correct
+- All tests passed!
+- testbench.sv:186: $finish called at 236000 (1ps)

@@ -11,16 +11,16 @@ Write 0xAAAA to address 5 then read it back on port 1. Basic Sanity Check
 Write two different values to two different addresses then read both simultaneously. Checks that the read ports can work indepedentyl
 
 **Test 3: Read collision same address**
-Both read ports pointed at the same address. The design should set collision high and zero out both outputs. Verifies the mutual exclusion logic is working.
+Both read ports pointed at the same address. The design should set collision high and zero out both outputs. checks if mutual exclusion works
 
 **Test 4: Write/read collision**
-Write and read the same address at the same time. Same result as Test 3 — collision fires, outputs go to zero.
+Write and read the same address at the same time. check output goes to 0
 
 **Test 5: Write and read both ports simultaneously**
-Write to address 3 while reading addresses 1 and 2 at the same time. All three addresses are different so no collision should fire and both reads should return the correct values.
+Write to address 3 while reading addresses 1 and 2 at the same time. no collision
 
 **Test 6: Reset clears outputs**
-Write 0xFFFF to an address, read it back to confirm dout1 shows the value, then hit reset. Checks that dout1 and dout2 go to zero after reset. Note: Icarus Verilog does not reliably support resetting memory arrays inside always blocks so this test checks output clearing rather than memory clearing directly.
+Write 0xFFFF to an address, read it back to confirm dout1 shows the value, then hit reset. Checks that dout1 and dout2 go to zero after reset. had to check the output was clearing instead of memory because of a bug in icarus verilog
 
 **Test 7: Address 31 boundary**
 Write and read back from the highest valid address. Checks that the 5 bit address lines work correctly at the boundary.
